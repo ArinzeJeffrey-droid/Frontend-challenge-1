@@ -63,20 +63,18 @@
     <script>
         const link = document.getElementById("svg");
         const share = document.getElementById("social-links");
+        let toggle = true;
         if (window.innerWidth > 768) {
             share.style.display = "none";
         }
         const show = () => {
-            let toggle = true;
             if (window.innerWidth <= 480) {
-              if(toggle){
-                share.style.display = "flex";
-                link.style.display = "none";
-              }else{
-               share.style.display = "none";
-               link.style.display = "block";
-              }
-              toggle = !toggle;
+                if (toggle == true) {
+                    share.style.display = "flex";
+                } else {
+                    share.style.display = "none";
+                }
+                toggle = !toggle;
             }
         };
     </script>
