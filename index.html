@@ -67,9 +67,16 @@
             share.style.display = "none";
         }
         const show = () => {
+            let toggle = true;
             if (window.innerWidth <= 480) {
+              if(toggle){
                 share.style.display = "flex";
                 link.style.display = "none";
+              }else{
+               share.style.display = "none";
+               link.style.display = "block";
+              }
+              toggle = !toggle;
             }
         };
     </script>
